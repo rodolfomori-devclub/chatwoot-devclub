@@ -314,3 +314,7 @@
   enabled: false
   premium: true
   column: feature_flags_ext_1
+- name: triage_flows
+  display_name: Triage Flows
+  enabled: false
+  column: feature_flags_ext_1

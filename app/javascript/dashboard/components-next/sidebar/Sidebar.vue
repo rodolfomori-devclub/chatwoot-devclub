@@ -125,6 +125,14 @@ const fetchSidebarSortPreferences = ([currentAccountId, userId]) => {
   store.dispatch('sidebarSortPreferences/initialize');
 };
 
+const isFeatureEnabledonAccount = useMapGetter(
+  'accounts/isFeatureEnabledonAccount'
+);
+
+const isTriageFlowsEnabled = computed(() =>
+  isFeatureEnabledonAccount.value(accountId.value, FEATURE_FLAGS.TRIAGE_FLOWS)
+);
+
 const toggleShortcutModalFn = show => {
   if (show) {
     emit('openKeyShortcutModal');
@@ -893,6 +901,18 @@ const menuItems = computed(() => {
           icon: 'i-lucide-repeat',
           to: accountScopedRoute('automation_list'),
         },
+        // Gated on the same flag as its routes: without it the entry is a door
+        // that bounces you straight back out.
+        ...(isTriageFlowsEnabled.value
+          ? [
+              {
+                name: 'Settings Triage Flows',
+                label: t('TRIAGE_FLOWS.SIDEBAR_LABEL'),
+                icon: 'i-lucide-git-fork',
+                to: accountScopedRoute('triage_flows_index'),
+              },
+            ]
+          : []),
         {
           name: 'Settings Agent Bots',
           label: t('SIDEBAR.AGENT_BOTS'),

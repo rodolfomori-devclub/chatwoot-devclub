@@ -1,0 +1,3755 @@
+[
+  {
+    "name": "valid_widget_two_level",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "valid_whatsapp_two_level",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_buttons_title_20",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "aaaaaaaaaaaaaaaaaaaa",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_buttons_title_21",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "aaaaaaaaaaaaaaaaaaaaa",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "option titles in step 'root' must be at most 20 characters for this channel"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_list_title_24",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "opt_1",
+              "title": "Opcao 1",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_2",
+              "title": "Opcao 2",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_3",
+              "title": "Opcao 3",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "quarto",
+              "title": "bbbbbbbbbbbbbbbbbbbbbbbb",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_list_title_25",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "opt_1",
+              "title": "Opcao 1",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_2",
+              "title": "Opcao 2",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_3",
+              "title": "Opcao 3",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "quarto",
+              "title": "bbbbbbbbbbbbbbbbbbbbbbbbb",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "option titles in step 'root' must be at most 24 characters for this channel"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_ten_options",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "opt_1",
+              "title": "Opcao 1",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_2",
+              "title": "Opcao 2",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_3",
+              "title": "Opcao 3",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_4",
+              "title": "Opcao 4",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_5",
+              "title": "Opcao 5",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_6",
+              "title": "Opcao 6",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_7",
+              "title": "Opcao 7",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_8",
+              "title": "Opcao 8",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_9",
+              "title": "Opcao 9",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_10",
+              "title": "Opcao 10",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_eleven_options",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "opt_1",
+              "title": "Opcao 1",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_2",
+              "title": "Opcao 2",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_3",
+              "title": "Opcao 3",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_4",
+              "title": "Opcao 4",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_5",
+              "title": "Opcao 5",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_6",
+              "title": "Opcao 6",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_7",
+              "title": "Opcao 7",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_8",
+              "title": "Opcao 8",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_9",
+              "title": "Opcao 9",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_10",
+              "title": "Opcao 10",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_11",
+              "title": "Opcao 11",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root' has more options than this channel supports (max 10)"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "widget_ten_options",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "opt_1",
+              "title": "Opcao 1",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_2",
+              "title": "Opcao 2",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_3",
+              "title": "Opcao 3",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_4",
+              "title": "Opcao 4",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_5",
+              "title": "Opcao 5",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_6",
+              "title": "Opcao 6",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_7",
+              "title": "Opcao 7",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_8",
+              "title": "Opcao 8",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_9",
+              "title": "Opcao 9",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_10",
+              "title": "Opcao 10",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "widget_eleven_options",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "opt_1",
+              "title": "Opcao 1",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_2",
+              "title": "Opcao 2",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_3",
+              "title": "Opcao 3",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_4",
+              "title": "Opcao 4",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_5",
+              "title": "Opcao 5",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_6",
+              "title": "Opcao 6",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_7",
+              "title": "Opcao 7",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_8",
+              "title": "Opcao 8",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_9",
+              "title": "Opcao 9",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_10",
+              "title": "Opcao 10",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "opt_11",
+              "title": "Opcao 11",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root' has more options than this channel supports (max 10)"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "widget_title_60",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "widget_title_61",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "option titles in step 'root' must be at most 60 characters for this channel"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_emoji_title_20_codepoints",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_emoji_title_21_codepoints",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "option titles in step 'root' must be at most 20 characters for this channel"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "duplicate_accented_titles",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "renovacao_2",
+              "title": "renovacao",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root' has options with the same title"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "duplicate_transliterated_titles",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "strasse",
+              "title": "Straße",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "strasse_2",
+              "title": "Strasse",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root' has options with the same title"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "self_reference",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "root"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root' cannot point to itself"
+    ],
+    "expected_unreachable": [
+      "financeiro"
+    ]
+  },
+  {
+    "name": "entry_step_missing",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "must define an entry step"
+    ],
+    "expected_unreachable": [
+      "root",
+      "financeiro"
+    ]
+  },
+  {
+    "name": "entry_step_unknown",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "nope",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "entry step 'nope' does not exist"
+    ],
+    "expected_unreachable": [
+      "root",
+      "financeiro"
+    ]
+  },
+  {
+    "name": "unknown_step_ref",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Tecnico",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "inexistente"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "option points to unknown step 'inexistente'"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "duplicate_step_ids",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Primeiro",
+          "options": [
+            {
+              "id": "a",
+              "title": "A",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        },
+        {
+          "id": "root",
+          "prompt": "Segundo",
+          "options": [
+            {
+              "id": "b",
+              "title": "B",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "contains duplicate step ids"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "unreachable_step",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        },
+        {
+          "id": "orfao",
+          "prompt": "Ninguem chega aqui",
+          "options": [
+            {
+              "id": "x",
+              "title": "X",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": [
+      "orfao"
+    ]
+  },
+  {
+    "name": "duplicate_option_ids",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "dup",
+              "title": "Primeiro",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "dup",
+              "title": "Segundo",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root' has duplicate option ids"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "invalid_option_id",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "Tecnico",
+              "title": "Tecnico",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "option id 'Tecnico' must be lowercase letters, numbers or underscore (max 40)"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "invalid_step_id",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "Root",
+      "steps": [
+        {
+          "id": "Root",
+          "prompt": "Prompt",
+          "options": [
+            {
+              "id": "a",
+              "title": "A",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step id 'Root' must be lowercase letters, numbers or underscore (max 40)"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "option_title_missing",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "every option in step 'root' needs a title"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "transition_missing",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Tecnico",
+              "next": null
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "every option in step 'root' needs a destination"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "prompt_missing",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "",
+          "options": [
+            {
+              "id": "a",
+              "title": "A",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root' needs a message"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "no_options",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": []
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'financeiro' needs at least one option"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "no_steps",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "must contain at least one step"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "invalid_status",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "a",
+              "title": "A",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "closed"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "'closed' is not a valid status (open, pending or resolved)"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "route_without_status",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "a",
+              "title": "A",
+              "next": {
+                "type": "route"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "'' is not a valid status (open, pending or resolved)"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "max_attempts_zero",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 0,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "no-match attempts must be between 1 and 5"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "max_attempts_one",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 1,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "max_attempts_five",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 5,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "max_attempts_six",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 6,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "no-match attempts must be between 1 and 5"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "no_match_action_missing",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 3
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "no-match needs a destination"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "no_match_then_is_step",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "x",
+        "max_attempts": 3,
+        "then": {
+          "type": "step",
+          "step_id": "root"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "no-match needs a destination"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "shadow_without_timeout",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "live_without_timeout",
+    "channel_type": "Channel::WebWidget",
+    "mode": "live",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "a live flow needs a timeout"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "live_with_empty_timeout_object",
+    "channel_type": "Channel::WebWidget",
+    "mode": "live",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {}
+    },
+    "expected_errors": [
+      "a live flow needs a timeout"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "timeout_zero_minutes",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 0,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "timeout must be between 1 and 1440 minutes"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "timeout_one_minute",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 1,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "timeout_1440_minutes",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 1440,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "timeout_1441_minutes",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 1441,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "timeout must be between 1 and 1440 minutes"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "timeout_action_missing",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30
+      }
+    },
+    "expected_errors": [
+      "timeout needs a destination"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "timeout_action_invalid_status",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "Como podemos ajudar?",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "done"
+        }
+      }
+    },
+    "expected_errors": [
+      "'done' is not a valid status (open, pending or resolved)"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_prompt_at_body_limit",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_prompt_over_body_limit",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root': the message plus the no-match reply must be at most 1024 characters for this channel"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "whatsapp_no_match_reply_pushes_prompt_over",
+    "channel_type": "Channel::Whatsapp",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [
+      "step 'root': the message plus the no-match reply must be at most 1024 characters for this channel"
+    ],
+    "expected_unreachable": []
+  },
+  {
+    "name": "widget_has_no_body_limit",
+    "channel_type": "Channel::WebWidget",
+    "mode": "shadow",
+    "definition": {
+      "entry_step_id": "root",
+      "steps": [
+        {
+          "id": "root",
+          "prompt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "options": [
+            {
+              "id": "tecnico",
+              "title": "Dúvidas Técnicas",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [
+                  "ia_atendendo"
+                ],
+                "status": "pending"
+              }
+            },
+            {
+              "id": "financeiro",
+              "title": "Financeiro",
+              "next": {
+                "type": "step",
+                "step_id": "financeiro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "financeiro",
+          "prompt": "Sobre o que você precisa falar?",
+          "options": [
+            {
+              "id": "renovacao",
+              "title": "Renovação",
+              "next": {
+                "type": "route",
+                "team_id": null,
+                "labels": [],
+                "status": "open"
+              }
+            }
+          ]
+        }
+      ],
+      "no_match": {
+        "message": "Não entendi.",
+        "max_attempts": 3,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      },
+      "timeout": {
+        "minutes": 30,
+        "then": {
+          "type": "route",
+          "team_id": null,
+          "labels": [],
+          "status": "open"
+        }
+      }
+    },
+    "expected_errors": [],
+    "expected_unreachable": []
+  }
+]

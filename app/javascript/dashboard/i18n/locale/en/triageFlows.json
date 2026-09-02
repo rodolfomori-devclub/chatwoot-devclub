@@ -1,0 +1,218 @@
+{
+  "TRIAGE_FLOWS": {
+    "SIDEBAR_LABEL": "Triage Flows",
+    "INDEX": {
+      "HEADER": {
+        "TITLE": "Triage Flows",
+        "DESCRIPTION": "Greet people with a menu when they start a conversation, then send them to the right team based on what they pick.",
+        "CREATE_FLOW": "New flow"
+      },
+      "EMPTY_STATE": {
+        "TITLE": "No triage flows yet",
+        "SUBTITLE": "Build a menu for one of your inboxes to sort incoming conversations before an agent ever sees them.",
+        "ACTION": "Create your first flow"
+      },
+      "STEP_COUNT": "{count} question | {count} questions",
+      "WARNING_COUNT": "{count} thing to fix | {count} things to fix",
+      "WARNINGS": {
+        "UNREACHABLE_STEP": "Nothing leads to the question \"{stepId}\", so it is never asked.",
+        "MISSING_TEAM": "A route still sends conversations to team {teamId}, which was deleted."
+      },
+      "EDIT": "Edit",
+      "CLONE": "Copy to another inbox",
+      "DELETE": "Delete flow"
+    },
+    "STATUS": {
+      "OFF": "Off",
+      "SHADOW": "Shadow",
+      "LIVE": "Live"
+    },
+    "CREATE": {
+      "HEADER": {
+        "TITLE": "New flow"
+      },
+      "SUBMIT": "Create flow",
+      "API": {
+        "SUCCESS_MESSAGE": "Triage flow created.",
+        "ERROR_MESSAGE": "Could not create the flow. Check the highlighted questions and try again."
+      }
+    },
+    "EDIT": {
+      "HEADER": {
+        "TITLE": "Edit flow"
+      },
+      "SUBMIT": "Save flow",
+      "VERSION": "Version {version}",
+      "API": {
+        "SUCCESS_MESSAGE": "Triage flow saved.",
+        "ERROR_MESSAGE": "Could not save the flow. Check the highlighted questions and try again."
+      }
+    },
+    "DELETE": {
+      "TITLE": "Delete triage flow",
+      "DESCRIPTION": "Conversations in this inbox will stop being triaged and will reach your team the way they did before. This cannot be undone.",
+      "CONFIRM": "Delete flow",
+      "CANCEL": "Cancel",
+      "API": {
+        "SUCCESS_MESSAGE": "Triage flow deleted.",
+        "ERROR_MESSAGE": "Could not delete the flow. Please try again."
+      }
+    },
+    "CLONE": {
+      "TITLE": "Copy flow to another inbox",
+      "DESCRIPTION": "Every question, option and routing rule is copied over. The copy starts out turned off, so you can review it before it greets anyone.",
+      "CONFIRM": "Copy flow",
+      "CANCEL": "Cancel",
+      "INBOX_LABEL": "Copy to inbox",
+      "INBOX_PLACEHOLDER": "Choose an inbox",
+      "INBOX_SEARCH_PLACEHOLDER": "Search inboxes",
+      "EMPTY_INBOXES": "Every inbox already has a flow.",
+      "API": {
+        "SUCCESS_MESSAGE": "Flow copied.",
+        "ERROR_MESSAGE": "Could not copy the flow. The target channel may not support these options."
+      }
+    },
+    "FORM": {
+      "NAME": {
+        "LABEL": "Flow name",
+        "PLACEHOLDER": "Support triage"
+      },
+      "INBOX": {
+        "LABEL": "Inbox",
+        "PLACEHOLDER": "Choose an inbox",
+        "SEARCH_PLACEHOLDER": "Search inboxes",
+        "EMPTY_STATE": "Every inbox already has a flow.",
+        "HINT": "Inboxes that already have a flow are not listed.",
+        "LOCKED_HINT": "The inbox cannot be changed after the flow is created. Copy the flow instead."
+      },
+      "ENABLED": {
+        "LABEL": "Enabled",
+        "DESCRIPTION": "Turn the flow off to stop it without deleting it."
+      },
+      "MODE": {
+        "LABEL": "Mode",
+        "SHADOW": {
+          "LABEL": "Shadow",
+          "DESCRIPTION": "The flow runs silently and records what it would have done. Nothing is sent to the contact."
+        },
+        "LIVE": {
+          "LABEL": "Live",
+          "DESCRIPTION": "The flow greets contacts and routes their conversations for real."
+        }
+      },
+      "ERRORS": {
+        "TITLE": "Fix these before saving"
+      },
+      "LEAVE_CONFIRM": "You have unsaved changes to this flow. Leave anyway and lose them?",
+      "NO_MATCH": {
+        "TITLE": "When the reply doesn't match",
+        "DESCRIPTION": "What happens when someone answers with something that isn't on the menu.",
+        "MESSAGE": {
+          "LABEL": "Reply with",
+          "PLACEHOLDER": "Sorry, I didn't catch that. Please pick one of the options."
+        },
+        "MAX_ATTEMPTS": {
+          "LABEL": "Attempts before giving up"
+        }
+      },
+      "TIMEOUT": {
+        "TITLE": "When the contact goes quiet",
+        "DESCRIPTION": "What happens when nobody replies to the menu.",
+        "MINUTES": {
+          "LABEL": "Wait for (minutes)"
+        }
+      },
+      "PREVIEW": {
+        "TITLE": "What the contact sees"
+      }
+    },
+    "STEPS": {
+      "TITLE": "Questions",
+      "DESCRIPTION": "Each question shows the contact a short message and a list of options to pick from.",
+      "ADD_STEP": "Add question",
+      "DELETE_STEP": "Delete question",
+      "DELETE_DIALOG": {
+        "TITLE": "Delete this question?",
+        "DESCRIPTION": "Its {options} option(s) and their routing are removed, and {parents} question(s) pointing at it lose their destination. This cannot be undone.",
+        "CONFIRM": "Delete question",
+        "CANCEL": "Keep it"
+      },
+      "STEP_LABEL": "Question {index}",
+      "ENTRY_BADGE": "Asked first",
+      "PROMPT": {
+        "LABEL": "Message",
+        "PLACEHOLDER": "How can we help you today?"
+      },
+      "WARNINGS": {
+        "UNREACHABLE": "No option leads to this question, so nobody is ever asked it."
+      },
+      "OPTIONS": {
+        "LABEL": "Options",
+        "ADD": "Add option",
+        "EMPTY": "Add at least one option so the contact has something to pick.",
+        "LIMIT_REACHED": "This channel shows at most {max} options.",
+        "LIST_SWITCH": "One more option switches this channel from buttons to a list, where titles can be {max} characters."
+      }
+    },
+    "OPTION": {
+      "TITLE": {
+        "PLACEHOLDER": "Technical questions",
+        "COUNTER": "{count}/{max}"
+      },
+      "ID_HINT": "Matches on \"{id}\"",
+      "DELETE": "Remove option",
+      "DRAG_HANDLE": "Drag to reorder",
+      "THEN": {
+        "LABEL": "When this option is picked",
+        "PLACEHOLDER": "Choose what happens next",
+        "SEARCH_PLACEHOLDER": "Search",
+        "ROUTE": "Route the conversation",
+        "GO_TO_STEP": "Ask: {step}",
+        "NEW_STEP": "Ask a new question"
+      }
+    },
+    "ROUTE": {
+      "TEAM": {
+        "LABEL": "Assign to team",
+        "PLACEHOLDER": "Choose a team",
+        "SEARCH_PLACEHOLDER": "Search teams",
+        "EMPTY_STATE": "No teams yet. Create one in Settings.",
+        "NONE": "Leave unassigned",
+        "MISSING": "This team was deleted. Pick another one before saving."
+      },
+      "STATUS": {
+        "LABEL": "Then",
+        "PLACEHOLDER": "Choose an outcome",
+        "OPEN": "Open for the team",
+        "PENDING": "Hand off to the bot",
+        "RESOLVED": "Resolve the conversation"
+      },
+      "LABELS": {
+        "LABEL": "Add labels",
+        "PLACEHOLDER": "Pick labels",
+        "SEARCH_PLACEHOLDER": "Search labels",
+        "EMPTY_STATE": "No labels yet. Create one in Settings."
+      },
+      "MESSAGE": {
+        "LABEL": "Closing message",
+        "PLACEHOLDER": "Got it, our team will be with you shortly.",
+        "SILENT": "Leave this empty and the contact gets no reply after picking this option — only silence."
+      }
+    },
+    "PREVIEW": {
+      "MODE": {
+        "WHATSAPP_BUTTONS": "WhatsApp reply buttons",
+        "WHATSAPP_LIST": "WhatsApp list",
+        "WIDGET": "Website widget",
+        "TEXT": "Plain text menu"
+      },
+      "OPTION_COUNT": "{count}/{max} options",
+      "OPTION_COUNT_UNCAPPED": "{count} options",
+      "CHAR_COUNT": "{count}/{max}",
+      "LIST_BUTTON": "Choose an item",
+      "EMPTY": "Add a question to see what the contact receives.",
+      "NO_OPTIONS": "This question has no options yet.",
+      "TOO_MANY_OPTIONS": "This channel shows at most {max} options, {count} configured."
+    }
+  }
+}
