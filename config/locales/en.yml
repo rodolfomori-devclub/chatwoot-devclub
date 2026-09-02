@@ -438,3 +438,33 @@ en:
       subject: 'Finish setting up %{custom_domain}'
     ssl_status:
       custom_domain_not_configured: 'Custom domain is not configured'
+  triage_flow:
+    errors:
+      inbox_account_mismatch: 'must belong to the same account'
+      no_steps: 'must contain at least one step'
+      entry_step_missing: 'must define an entry step'
+      entry_step_unknown: "entry step '%{step_id}' does not exist"
+      duplicate_step_ids: 'contains duplicate step ids'
+      invalid_step_id: "step id '%{step_id}' must be lowercase letters, numbers or underscore (max 40)"
+      prompt_missing: "step '%{step_id}' needs a message"
+      no_options: "step '%{step_id}' needs at least one option"
+      duplicate_option_ids: "step '%{step_id}' has duplicate option ids"
+      duplicate_option_titles: "step '%{step_id}' has options with the same title"
+      invalid_option_id: "option id '%{option_id}' must be lowercase letters, numbers or underscore (max 40)"
+      option_title_missing: "every option in step '%{step_id}' needs a title"
+      transition_missing: "every option in step '%{step_id}' needs a destination"
+      self_reference: "step '%{step_id}' cannot point to itself"
+      unknown_step_ref: "option points to unknown step '%{step_id}'"
+      invalid_status: "'%{status}' is not a valid status (open, pending or resolved)"
+      unknown_team: 'team %{team_id} does not belong to this account'
+      max_attempts_range: 'no-match attempts must be between 1 and 5'
+      no_match_action_missing: 'no-match needs a destination'
+      timeout_required_when_live: 'a live flow needs a timeout'
+      timeout_range: 'timeout must be between 1 and 1440 minutes'
+      timeout_action_missing: 'timeout needs a destination'
+      too_many_options: "step '%{step_id}' has more options than this channel supports (max %{max})"
+      option_title_too_long: "option titles in step '%{step_id}' must be at most %{max} characters for this channel"
+      prompt_too_long: "step '%{step_id}': the message plus the no-match reply must be at most %{max} characters for this channel"
+      invalid_payload: 'must be an object'
+    feature_not_enabled: 'Triage Flows is not enabled for this account'
+    system_name: 'Triage'

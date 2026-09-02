@@ -59,3 +59,11 @@ periodic_assignment_job:
   cron: '*/30 * * * *'
   class: 'AutoAssignment::PeriodicAssignmentJob'
   queue: scheduled_jobs
+
+# executed every 5 minutes
+# re-drives TriageFlows::TimeoutJob for sessions whose delayed job was lost,
+# so a customer is never parked in `pending` behind a menu nobody will answer
+triage_flows_stranded_sweep_job:
+  cron: '*/5 * * * *'
+  class: 'TriageFlows::StrandedSweepJob'
+  queue: low

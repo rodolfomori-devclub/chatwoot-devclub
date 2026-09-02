@@ -47,6 +47,7 @@ import slaReports from './modules/SLAReports';
 import summaryReports from './modules/summaryReports';
 import teamMembers from './modules/teamMembers';
 import teams from './modules/teams';
+import triageFlows from './modules/triageFlows';
 import userNotificationSettings from './modules/userNotificationSettings';
 import webhooks from './modules/webhooks';
 import captainAssistants from './captain/assistant';
@@ -111,6 +112,7 @@ export default createStore({
     summaryReports,
     teamMembers,
     teams,
+    triageFlows,
     userNotificationSettings,
     webhooks,
     captainAssistants,

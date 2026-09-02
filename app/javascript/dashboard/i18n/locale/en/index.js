@@ -35,6 +35,7 @@ import settings from './settings.json';
 import signup from './signup.json';
 import sla from './sla.json';
 import teamsSettings from './teamsSettings.json';
+import triageFlows from './triageFlows.json';
 import whatsappTemplates from './whatsappTemplates.json';
 import contentTemplates from './contentTemplates.json';
 import mfa from './mfa.json';
@@ -77,6 +78,7 @@ export default {
   ...signup,
   ...sla,
   ...teamsSettings,
+  ...triageFlows,
   ...whatsappTemplates,
   ...contentTemplates,
   ...mfa,

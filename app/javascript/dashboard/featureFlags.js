@@ -42,6 +42,7 @@ export const FEATURE_FLAGS = {
   SAML: 'saml',
   QUOTED_EMAIL_REPLY: 'quoted_email_reply',
   COMPANIES: 'companies',
+  TRIAGE_FLOWS: 'triage_flows',
 };
 
 export const PREMIUM_FEATURES = [

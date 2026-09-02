@@ -9,6 +9,7 @@ import { useI18n } from 'vue-i18n';
 import { useStorage } from '@vueuse/core';
 import { useSidebarKeyboardShortcuts } from './useSidebarKeyboardShortcuts';
 import { vOnClickOutside } from '@vueuse/components';
+import { FEATURE_FLAGS } from 'dashboard/featureFlags';
 
 import Button from 'dashboard/components-next/button/Button.vue';
 import SidebarGroup from './SidebarGroup.vue';
@@ -33,13 +34,21 @@ const emit = defineEmits([
   'closeMobileSidebar',
 ]);
 
-const { accountScopedRoute, isOnChatwootCloud } = useAccount();
+const { accountId, accountScopedRoute, isOnChatwootCloud } = useAccount();
 const store = useStore();
 const searchShortcut = useKbd([`$mod`, 'k']);
 const { t } = useI18n();
 
 const isACustomBrandedInstance = useMapGetter(
   'globalConfig/isACustomBrandedInstance'
+);
+
+const isFeatureEnabledonAccount = useMapGetter(
+  'accounts/isFeatureEnabledonAccount'
+);
+
+const isTriageFlowsEnabled = computed(() =>
+  isFeatureEnabledonAccount.value(accountId.value, FEATURE_FLAGS.TRIAGE_FLOWS)
 );
 
 const toggleShortcutModalFn = show => {
@@ -523,6 +532,18 @@ const menuItems = computed(() => {
           icon: 'i-lucide-workflow',
           to: accountScopedRoute('automation_list'),
         },
+        // Gated on the same flag as its routes: without it the entry is a door
+        // that bounces you straight back out.
+        ...(isTriageFlowsEnabled.value
+          ? [
+              {
+                name: 'Settings Triage Flows',
+                label: t('TRIAGE_FLOWS.SIDEBAR_LABEL'),
+                icon: 'i-lucide-git-fork',
+                to: accountScopedRoute('triage_flows_index'),
+              },
+            ]
+          : []),
         {
           name: 'Settings Agent Bots',
           label: t('SIDEBAR.AGENT_BOTS'),

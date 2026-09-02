@@ -239,6 +239,10 @@ Rails.application.routes.draw do
             resources :inboxes, only: [:index, :create, :destroy], module: :assignment_policies
           end
 
+          resources :triage_flows, only: [:index, :show, :create, :update, :destroy] do
+            post :clone, on: :member
+          end
+
           resources :inboxes, only: [] do
             resource :assignment_policy, only: [:show, :create, :destroy], module: :inboxes
           end

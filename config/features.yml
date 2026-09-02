@@ -227,3 +227,6 @@
   enabled: false
   premium: true
   chatwoot_internal: true
+- name: triage_flows
+  display_name: Triage Flows
+  enabled: false

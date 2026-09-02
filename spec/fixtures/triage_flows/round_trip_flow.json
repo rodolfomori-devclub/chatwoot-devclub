@@ -1,0 +1,73 @@
+{
+  "id": 992,
+  "name": "DevClub Triage",
+  "enabled": true,
+  "mode": "live",
+  "version": 3,
+  "definition": {
+    "entry_step_id": "root",
+    "steps": [
+      {
+        "id": "root",
+        "prompt": "Olá! Como podemos te ajudar?",
+        "options": [
+          {
+            "id": "tecnico",
+            "title": "Dúvidas Técnicas",
+            "next": {
+              "type": "route",
+              "team_id": 0,
+              "labels": ["ia_atendendo", "suporte_n1"],
+              "status": "pending"
+            }
+          },
+          {
+            "id": "financeiro",
+            "title": "Financeiro",
+            "next": { "type": "step", "step_id": "financeiro" }
+          }
+        ]
+      },
+      {
+        "id": "financeiro",
+        "prompt": "Sobre o que você precisa falar com o financeiro?",
+        "options": [
+          {
+            "id": "renovacao",
+            "title": "Renovação",
+            "next": {
+              "type": "route",
+              "team_id": 0,
+              "labels": [],
+              "status": "open",
+              "message": "Um instante, já te transfiro."
+            }
+          },
+          {
+            "id": "comprar_formacao",
+            "title": "Comprar Formação",
+            "next": {
+              "type": "route",
+              "team_id": 0,
+              "labels": ["comprar_formacao"],
+              "status": "resolved"
+            }
+          }
+        ]
+      }
+    ],
+    "no_match": {
+      "message": "Não entendi. Responda com o número da opção.",
+      "max_attempts": 3,
+      "then": { "type": "route", "team_id": 0, "labels": [], "status": "open" }
+    },
+    "timeout": {
+      "minutes": 30,
+      "then": { "type": "route", "team_id": 0, "labels": [], "status": "open" }
+    }
+  },
+  "inbox": { "id": 4023, "name": "WhatsApp DevClub", "channel_type": "Channel::WebWidget" },
+  "warnings": [],
+  "created_at": 1788114499,
+  "updated_at": 1788114499
+}

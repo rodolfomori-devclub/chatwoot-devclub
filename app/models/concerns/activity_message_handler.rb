@@ -77,9 +77,14 @@ module ActivityMessageHandler
     end
   end
 
+  # Every Current.executed_by type needs its own branch or its status changes
+  # leave no trail at all: an agent opening the conversation afterwards cannot
+  # tell why it went to pending or came back.
   def automation_status_change_activity_content
     if Current.executed_by.instance_of?(AutomationRule)
       I18n.t("conversations.activity.status.#{status}", user_name: I18n.t('automation.system_name'))
+    elsif Current.executed_by.instance_of?(TriageFlow)
+      I18n.t("conversations.activity.status.#{status}", user_name: I18n.t('triage_flow.system_name'))
     elsif Current.executed_by.instance_of?(Contact)
       Current.executed_by = nil
       I18n.t('conversations.activity.status.system_auto_open')
@@ -122,8 +127,9 @@ module ActivityMessageHandler
   end
 
   def activity_message_owner(user_name)
-    user_name = I18n.t('automation.system_name') if !user_name && Current.executed_by.present?
-    user_name
+    return user_name if user_name || Current.executed_by.blank?
+
+    Current.executed_by.instance_of?(TriageFlow) ? I18n.t('triage_flow.system_name') : I18n.t('automation.system_name')
   end
 end
 

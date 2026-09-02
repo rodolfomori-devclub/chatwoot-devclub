@@ -13,4 +13,12 @@ describe AsyncDispatcher do
       dispatcher.dispatch(event_name, timestamp, event_data)
     end
   end
+
+  describe '#listeners' do
+    # Guards the one-line registration in AsyncDispatcher#listeners: if an
+    # upstream merge drops it, the whole triage engine goes silently dead.
+    it 'includes the triage flow listener' do
+      expect(dispatcher.listeners).to include(TriageFlowListener.instance)
+    end
+  end
 end
