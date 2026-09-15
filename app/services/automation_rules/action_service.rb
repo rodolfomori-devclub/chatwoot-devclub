@@ -40,10 +40,17 @@ class AutomationRules::ActionService < ActionService
     WebhookJob.perform_later(webhook_url[0], payload)
   end
 
+  # action_params: [content, *button_titles]; buttons are sent as an input_select message
   def send_message(message)
     return if conversation_a_tweet?
 
-    params = { content: message[0], private: false, content_attributes: { automation_rule_id: @rule.id } }
+    content, *buttons = message
+    buttons = buttons.compact_blank
+    params = { content: content, private: false, content_attributes: { automation_rule_id: @rule.id } }
+    if buttons.any?
+      params[:content_type] = 'input_select'
+      params[:content_attributes][:items] = buttons.map { |title| { title: title, value: title } }
+    end
     Messages::MessageBuilder.new(nil, @conversation, params).perform
   end
 

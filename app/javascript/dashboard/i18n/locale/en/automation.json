@@ -96,7 +96,10 @@
       "TEAM_MESSAGE_INPUT_PLACEHOLDER": "Enter your message here",
       "TEAM_DROPDOWN_PLACEHOLDER": "Select teams",
       "EMAIL_INPUT_PLACEHOLDER": "Enter email",
-      "URL_INPUT_PLACEHOLDER": "Enter URL"
+      "URL_INPUT_PLACEHOLDER": "Enter URL",
+      "ADD_BUTTON": "Add button",
+      "BUTTON_INPUT_PLACEHOLDER": "Button text",
+      "BUTTONS_HELP": "Up to 3 options are sent as buttons, 4 to 10 as a list. The reply arrives as the option text."
     },
     "TOGGLE": {
       "ACTIVATION_TITLE": "Activate Automation Rule",
