@@ -46,13 +46,26 @@ class AutomationRules::ActionService < ActionService
 
     content, *buttons = message
     buttons = buttons.compact_blank
+    return create_button_message(content, buttons) if buttons.any?
+
     params = { content: content, private: false, content_attributes: { automation_rule_id: @rule.id } }
-    if buttons.any?
-      params[:content_type] = 'input_select'
-      params[:content_attributes][:items] = buttons.map { |title| { title: title, value: title } }
-    end
-    # ActionController::Parameters: the builder only reads content_attributes[:items] from this format
-    Messages::MessageBuilder.new(nil, @conversation, ActionController::Parameters.new(params)).perform
+    Messages::MessageBuilder.new(nil, @conversation, params).perform
+  end
+
+  # Created without MessageBuilder: it drops content_attributes[:items] unless the params come from the API
+  def create_button_message(content, buttons)
+    @conversation.messages.create!(
+      account_id: @conversation.account_id,
+      inbox_id: @conversation.inbox_id,
+      message_type: :outgoing,
+      content: content,
+      private: false,
+      content_type: 'input_select',
+      content_attributes: {
+        automation_rule_id: @rule.id,
+        items: buttons.map { |title| { title: title, value: title } }
+      }
+    )
   end
 
   def add_private_note(message)
