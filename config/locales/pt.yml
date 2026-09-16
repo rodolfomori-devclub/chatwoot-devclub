@@ -182,7 +182,7 @@ pt:
       instagram_deleted_story_content: Esta história já não está disponível.
       deleted: Esta mensagem foi apagada
       whatsapp:
-        list_button_label: 'Escolha um item'
+        list_button_label: 'Escolha uma opção'
       delivery_status:
         error_code: 'Código de erro: %{error_code}'
     activity:
