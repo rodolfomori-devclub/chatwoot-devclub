@@ -14,10 +14,10 @@ class Messages::MessageBuilder
     @message_type = params[:message_type] || 'outgoing'
     @attachments = params[:attachments]
     @automation_rule = content_attributes&.dig(:automation_rule_id)
-    @items = content_attributes&.dig(:items)
     return unless params.instance_of?(ActionController::Parameters)
 
     @in_reply_to = content_attributes&.dig(:in_reply_to)
+    @items = content_attributes&.dig(:items)
   end
 
   def perform

@@ -51,7 +51,8 @@ class AutomationRules::ActionService < ActionService
       params[:content_type] = 'input_select'
       params[:content_attributes][:items] = buttons.map { |title| { title: title, value: title } }
     end
-    Messages::MessageBuilder.new(nil, @conversation, params).perform
+    # ActionController::Parameters: the builder only reads content_attributes[:items] from this format
+    Messages::MessageBuilder.new(nil, @conversation, ActionController::Parameters.new(params)).perform
   end
 
   def add_private_note(message)
