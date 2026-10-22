@@ -1633,6 +1633,45 @@ ActiveRecord::Schema[7.1].define(version: 2026_10_19_143116) do
     t.index ["name", "account_id"], name: "index_teams_on_name_and_account_id", unique: true
   end
 
+  create_table "triage_flows", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.bigint "inbox_id", null: false
+    t.string "name", limit: 255, null: false
+    t.boolean "enabled", default: false, null: false
+    t.integer "mode", default: 0, null: false
+    t.integer "version", default: 1, null: false
+    t.jsonb "definition", default: {}, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_triage_flows_on_account_id"
+    t.index ["inbox_id"], name: "index_triage_flows_on_inbox_id", unique: true
+  end
+
+  create_table "triage_sessions", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.bigint "triage_flow_id", null: false
+    t.bigint "conversation_id", null: false
+    t.integer "status", default: 0, null: false
+    t.integer "flow_version", null: false
+    t.string "mode", null: false
+    t.string "current_step_id"
+    t.integer "attempts", default: 0, null: false
+    t.bigint "last_prompt_message_id"
+    t.bigint "last_input_message_id"
+    t.string "timeout_token"
+    t.datetime "prompted_at"
+    t.datetime "finished_at"
+    t.jsonb "path", default: [], null: false
+    t.jsonb "outcome", default: {}, null: false
+    t.jsonb "trace", default: [], null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_triage_sessions_on_account_id"
+    t.index ["conversation_id"], name: "index_triage_sessions_on_conversation_id", unique: true
+    t.index ["status", "prompted_at"], name: "index_triage_sessions_on_status_and_prompted_at"
+    t.index ["triage_flow_id"], name: "index_triage_sessions_on_triage_flow_id"
+  end
+
   create_table "user_sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "client_id", null: false
