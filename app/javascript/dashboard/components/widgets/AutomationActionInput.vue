@@ -109,11 +109,42 @@ export default {
         return this.action_params;
       },
       set(value) {
-        this.action_params = value;
+        this.updateMessageParams(value, this.messageButtons);
       },
+    },
+    // send_message stores buttons after the content: [content, ...buttonTitles]
+    messageButtons() {
+      return Array.isArray(this.action_params)
+        ? this.action_params.slice(1)
+        : [];
+    },
+    showMessageButtons() {
+      return this.action_name === 'send_message' && !this.isMacro;
     },
   },
   methods: {
+    updateMessageParams(message, buttons) {
+      this.action_params = buttons.length
+        ? [message || '', ...buttons]
+        : message;
+    },
+    addMessageButton() {
+      this.updateMessageParams(this.castMessageVmodel, [
+        ...this.messageButtons,
+        '',
+      ]);
+    },
+    updateMessageButton(index, value) {
+      const buttons = [...this.messageButtons];
+      buttons[index] = value;
+      this.updateMessageParams(this.castMessageVmodel, buttons);
+    },
+    removeMessageButton(index) {
+      this.updateMessageParams(
+        this.castMessageVmodel,
+        this.messageButtons.filter((_, i) => i !== index)
+      );
+    },
     removeAction() {
       this.$emit('removeAction');
     },
@@ -223,6 +254,45 @@ export default {
         :placeholder="$t('AUTOMATION.ACTION.TEAM_MESSAGE_INPUT_PLACEHOLDER')"
         class="[&_.ProseMirror-menubar]:hidden px-3 py-1 bg-n-alpha-1 rounded-lg outline outline-1 outline-n-weak dark:outline-n-strong"
       />
+      <div v-if="showMessageButtons" class="flex flex-col gap-2">
+        <div
+          v-for="(button, index) in messageButtons"
+          :key="index"
+          class="flex items-center gap-2"
+        >
+          <NextInput
+            :model-value="button"
+            type="text"
+            size="sm"
+            class="flex-1"
+            maxlength="20"
+            :placeholder="$t('AUTOMATION.ACTION.BUTTON_INPUT_PLACEHOLDER')"
+            @update:model-value="updateMessageButton(index, $event)"
+          />
+          <NextButton
+            sm
+            ghost
+            slate
+            icon="i-lucide-x"
+            class="flex-shrink-0"
+            @click="removeMessageButton(index)"
+          />
+        </div>
+        <div class="flex items-center gap-2">
+          <NextButton
+            v-if="messageButtons.length < 10"
+            sm
+            faded
+            blue
+            icon="i-lucide-plus"
+            :label="$t('AUTOMATION.ACTION.ADD_BUTTON')"
+            @click="addMessageButton"
+          />
+          <span class="text-xs text-n-slate-11">
+            {{ $t('AUTOMATION.ACTION.BUTTONS_HELP') }}
+          </span>
+        </div>
+      </div>
     </div>
     <span v-if="errorMessage" class="text-sm text-n-ruby-11">
       {{ errorMessage }}

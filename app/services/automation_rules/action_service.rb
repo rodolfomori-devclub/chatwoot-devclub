@@ -38,11 +38,32 @@ class AutomationRules::ActionService < ActionService
     WebhookJob.perform_later(webhook_url[0], payload)
   end
 
+  # action_params: [content, *button_titles]; buttons are sent as an input_select message
   def send_message(message)
     return if conversation_a_tweet?
 
-    params = { content: message[0], private: false, content_attributes: { automation_rule_id: @rule.id } }
+    content, *buttons = message
+    buttons = buttons.compact_blank
+    return create_button_message(content, buttons) if buttons.any?
+
+    params = { content: content, private: false, content_attributes: { automation_rule_id: @rule.id } }
     Messages::MessageBuilder.new(nil, @conversation, params).perform
+  end
+
+  # Created without MessageBuilder: it drops content_attributes[:items] unless the params come from the API
+  def create_button_message(content, buttons)
+    @conversation.messages.create!(
+      account_id: @conversation.account_id,
+      inbox_id: @conversation.inbox_id,
+      message_type: :outgoing,
+      content: content,
+      private: false,
+      content_type: 'input_select',
+      content_attributes: {
+        automation_rule_id: @rule.id,
+        items: buttons.map { |title| { title: title, value: title } }
+      }
+    )
   end
 
   def add_private_note(message)
