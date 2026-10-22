@@ -125,10 +125,6 @@ const fetchSidebarSortPreferences = ([currentAccountId, userId]) => {
   store.dispatch('sidebarSortPreferences/initialize');
 };
 
-const isFeatureEnabledonAccount = useMapGetter(
-  'accounts/isFeatureEnabledonAccount'
-);
-
 const isTriageFlowsEnabled = computed(() =>
   isFeatureEnabledonAccount.value(accountId.value, FEATURE_FLAGS.TRIAGE_FLOWS)
 );
